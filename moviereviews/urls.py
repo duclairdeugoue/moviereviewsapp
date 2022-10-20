@@ -18,9 +18,11 @@ from django.urls import path, include
 
 from django.conf.urls.static import static
 from django.conf import settings
+from movie import views as movieView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',movieView.home, name='home'),
     path('movie/',include('movie.urls')),
     path('news/',include('news.urls')),
     path('accounts/',include('accounts.urls')),

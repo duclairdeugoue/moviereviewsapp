@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% comment %} {{ form }} {% endcomment %}
+    <div class="card mx-auto mt-4">
+        <div class="card-header">
+            <h2 class="card-title h2">Login Form</h2>
+        </div>
+        <div class="card-body">
+            {% if error %}
+                <div class="alert alert-danger mt-3">{{ error }}</div>
+            {% endif %}
+            <div class="row my-3">
+                <div class="col-4"></div>
+                <div class="col-md-4">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_div }}
+                        <div class="form-group my-3">
+                            <input 
+                                type="submit" 
+                                class="form-control btn btn-primary" 
+                                value="Login Up">
+                        </div>
+                </div>
+                <div class="col-4"></div>
+                
+            </div>
+        </div>
+    </div>
+{% endblock content%}

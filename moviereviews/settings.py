@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-8eydpb!fv(h@jyd%u^0zny(0uvcf)fziv1m(8vn@rznwvynap^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -59,7 +59,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'moviereviews/templates')    
+            os.path.join(BASE_DIR,'moviereviews/templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -84,10 +84,10 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'moviereviews',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': '/Applications/MAMP/tmp/mysql/mysql.sock',
+        'NAME': 'duclairdeugoue$moviereviews',
+        'USER': 'duclairdeugoue',
+        'PASSWORD': 'Deu6827879100',
+        'HOST': 'duclairdeugoue.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
